@@ -23,6 +23,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [ShinobiGauges setLicenseKey:@"<YOUR LICENSE KEY HERE>"];
     // Create a gauge
     self.gauge = [[SGaugeRadial alloc] initWithFrame:CGRectInset(self.view.bounds, 40, 100)
                                          fromMinimum:@0
