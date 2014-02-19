@@ -7,8 +7,11 @@
 //
 
 #import "SCViewController.h"
+#import "SCAudioMeter.h"
 
 @interface SCViewController ()
+
+@property (nonatomic, strong) SCAudioMeter *audioMeter;
 
 @end
 
@@ -18,6 +21,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Let's try the audio meter
+    self.audioMeter = [SCAudioMeter new];
+    [self.audioMeter beginAudioMeteringWithCallback:^(double value) {
+        NSLog(@"RMS Value: %0.3f", value);
+    }];
 }
 
 - (void)didReceiveMemoryWarning
