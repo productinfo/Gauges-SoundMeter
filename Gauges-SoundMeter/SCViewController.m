@@ -8,10 +8,12 @@
 
 #import "SCViewController.h"
 #import "SCAudioMeter.h"
+#import <ShinobiGauges/ShinobiGauges.h>
 
 @interface SCViewController ()
 
 @property (nonatomic, strong) SCAudioMeter *audioMeter;
+@property (nonatomic, strong) SGaugeRadial *gauge;
 
 @end
 
@@ -21,12 +23,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    // Create a gauge
+    self.gauge = [[SGaugeRadial alloc] initWithFrame:CGRectInset(self.view.bounds, 40, 100)
+                                         fromMinimum:@0
+                                           toMaximum:@5];
+    
+    [self.view addSubview:self.gauge];
     
     // Let's try the audio meter
     self.audioMeter = [SCAudioMeter new];
     [self.audioMeter beginAudioMeteringWithCallback:^(double value) {
         NSLog(@"RMS Value: %0.3f", value);
+        self.gauge.value = value;
     }];
+    
 }
 
 - (void)didReceiveMemoryWarning

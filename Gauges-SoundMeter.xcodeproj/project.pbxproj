@@ -23,6 +23,7 @@
 		F4199B9518B3C63200D4202C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4199B9318B3C63200D4202C /* InfoPlist.strings */; };
 		F4199B9718B3C63200D4202C /* Gauges_SoundMeterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4199B9618B3C63200D4202C /* Gauges_SoundMeterTests.m */; };
 		F4BF197118B500FB00C7F1AF /* SCAudioMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BF197018B500FB00C7F1AF /* SCAudioMeter.m */; };
+		F4CDB07618B51DA600DAD260 /* ShinobiGauges.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4CDB07518B51DA600DAD260 /* ShinobiGauges.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		F4199B9618B3C63200D4202C /* Gauges_SoundMeterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gauges_SoundMeterTests.m; sourceTree = "<group>"; };
 		F4BF196F18B500FB00C7F1AF /* SCAudioMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAudioMeter.h; sourceTree = "<group>"; };
 		F4BF197018B500FB00C7F1AF /* SCAudioMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAudioMeter.m; sourceTree = "<group>"; };
+		F4CDB07518B51DA600DAD260 /* ShinobiGauges.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiGauges.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				F4199B7018B3C63200D4202C /* UIKit.framework in Frameworks */,
 				F4199B6C18B3C63200D4202C /* Foundation.framework in Frameworks */,
 				226A402692B54FF59A3CA8F4 /* libPods.a in Frameworks */,
+				F4CDB07618B51DA600DAD260 /* ShinobiGauges.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +115,7 @@
 		F4199B6A18B3C63200D4202C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4CDB07518B51DA600DAD260 /* ShinobiGauges.framework */,
 				F4199B6B18B3C63200D4202C /* Foundation.framework */,
 				F4199B6D18B3C63200D4202C /* CoreGraphics.framework */,
 				F4199B6F18B3C63200D4202C /* UIKit.framework */,
@@ -479,6 +483,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/sdavies/dev/Evangelism/Blogs/Gauges-SoundMeter",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gauges-SoundMeter/Gauges-SoundMeter-Prefix.pch";
 				INFOPLIST_FILE = "Gauges-SoundMeter/Gauges-SoundMeter-Info.plist";
@@ -493,6 +501,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/sdavies/dev/Evangelism/Blogs/Gauges-SoundMeter",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Gauges-SoundMeter/Gauges-SoundMeter-Prefix.pch";
 				INFOPLIST_FILE = "Gauges-SoundMeter/Gauges-SoundMeter-Info.plist";
