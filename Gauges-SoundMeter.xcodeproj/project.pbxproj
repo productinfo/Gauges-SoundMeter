@@ -10,6 +10,80 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>0140125607CD421BB3DC87BE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>0B9ABC4E12C24B12A023F556</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>1A70798DA2E846E583F3D551</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>226A402692B54FF59A3CA8F4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1A70798DA2E846E583F3D551</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>6C79F49058054E659AB8176A</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -36,6 +110,21 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 			<key>showEnvVarsInLog</key>
 			<string>1</string>
 		</dict>
+		<key>BCC1F680C6AF446680BCAC60</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>F4199B5F18B3C63200D4202C</key>
 		<dict>
 			<key>children</key>
@@ -44,6 +133,7 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 				<string>F4199B9018B3C63200D4202C</string>
 				<string>F4199B6A18B3C63200D4202C</string>
 				<string>F4199B6918B3C63200D4202C</string>
+				<string>BCC1F680C6AF446680BCAC60</string>
 			</array>
 			<key>indentWidth</key>
 			<string>4</string>
@@ -144,6 +234,7 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 				<string>F4199B6E18B3C63200D4202C</string>
 				<string>F4199B7018B3C63200D4202C</string>
 				<string>F4199B6C18B3C63200D4202C</string>
+				<string>226A402692B54FF59A3CA8F4</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -171,10 +262,12 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 			<string>F4199B9A18B3C63200D4202C</string>
 			<key>buildPhases</key>
 			<array>
+				<string>0140125607CD421BB3DC87BE</string>
 				<string>F4199B6418B3C63200D4202C</string>
 				<string>F4199B6518B3C63200D4202C</string>
 				<string>F4199B6618B3C63200D4202C</string>
 				<string>6C79F49058054E659AB8176A</string>
+				<string>0B9ABC4E12C24B12A023F556</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -226,6 +319,7 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 				<string>F4199B6D18B3C63200D4202C</string>
 				<string>F4199B6F18B3C63200D4202C</string>
 				<string>F4199B8A18B3C63200D4202C</string>
+				<string>1A70798DA2E846E583F3D551</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -941,6 +1035,8 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 		</dict>
 		<key>F4199B9B18B3C63200D4202C</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BCC1F680C6AF446680BCAC60</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
@@ -965,6 +1061,8 @@ find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EX
 		</dict>
 		<key>F4199B9C18B3C63200D4202C</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BCC1F680C6AF446680BCAC60</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
