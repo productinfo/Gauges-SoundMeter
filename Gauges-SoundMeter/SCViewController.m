@@ -26,16 +26,16 @@
     [ShinobiGauges setLicenseKey:@"<YOUR LICENSE KEY HERE>"];
     // Create a gauge
     self.gauge = [[SGaugeRadial alloc] initWithFrame:CGRectInset(self.view.bounds, 40, 100)
-                                         fromMinimum:@0
-                                           toMaximum:@1];
+                                         fromMinimum:@(-60)
+                                           toMaximum:@0];
     
     [self.view addSubview:self.gauge];
     
     // Let's try the audio meter
     self.audioMeter = [[SCAudioMeter alloc] initWithSamplePeriod:0.1];
     [self.audioMeter beginAudioMeteringWithCallback:^(double value) {
-        NSLog(@"RMS Value: %0.3f", value);
-        [self.gauge setValue:value duration:0.1];
+        NSLog(@"RMS Value: %0.3f", 10 * log10(value));
+        [self.gauge setValue:10 * log10(value) duration:0.1];
     }];
     
 }
