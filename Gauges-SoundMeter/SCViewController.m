@@ -30,8 +30,9 @@
     // Let's try the audio meter
     self.audioMeter = [[SCAudioMeter alloc] initWithSamplePeriod:0.1];
     [self.audioMeter beginAudioMeteringWithCallback:^(double value) {
-        NSLog(@"RMS Value: %0.3f", 10 * log10(value));
-        [self.gauge setValue:10 * log10(value) duration:0.1];
+        // Convert the value to a dB (logarithmic) scale
+        double dBValue = 10 * log10(value);
+        [self.gauge setValue:dBValue duration:0.1];
     }];
     
 }
@@ -43,25 +44,50 @@
                                          fromMinimum:@(-60)
                                            toMaximum:@0];
     
+    SGaugeStyle *gs = self.gauge.style;
+    
     // Set up some qualatitive ranges
     self.gauge.qualitativeRanges = @[
         [SGaugeQualitativeRange rangeWithMinimum:@-60
                                          maximum:@-15
                                            color:[[UIColor greenColor] colorWithAlphaComponent:0.4]],
         [SGaugeQualitativeRange rangeWithMinimum:@-15
-                                         maximum:@-7.5
+                                         maximum:@-8
                                            color:[[UIColor yellowColor] colorWithAlphaComponent:0.4]],
-        [SGaugeQualitativeRange rangeWithMinimum:@-7.5
-                                         maximum:@-2.5
+        [SGaugeQualitativeRange rangeWithMinimum:@-8
+                                         maximum:@-2
                                            color:[[UIColor orangeColor] colorWithAlphaComponent:0.4]],
-        [SGaugeQualitativeRange rangeWithMinimum:@-2.5
+        [SGaugeQualitativeRange rangeWithMinimum:@-2
                                          maximum:@0
                                            color:[[UIColor redColor] colorWithAlphaComponent:0.4]]
         ];
-    self.gauge.style.qualitativeRangeOuterPosition = self.gauge.style.tickBaselinePosition;
-    self.gauge.style.qualitativeRangeInnerPosition = 0.85;
+    gs.qualitativeRangeOuterPosition = self.gauge.style.tickBaselinePosition;
+    gs.qualitativeRangeInnerPosition = 0.85;
     
-    self.gauge.style.majorTickSize = CGSizeMake(2, 17);
+    gs.majorTickSize = CGSizeMake(2, 17);
+    
+    gs.knobRadius = 10;
+    gs.knobColor = [UIColor darkGrayColor];
+    gs.knobBorderWidth = 2;
+    gs.needleWidth = 10;
+    gs.needleBorderWidth = 2;
+    gs.needleColor = [[UIColor orangeColor] colorWithAlphaComponent:0.8];
+    gs.needleBorderColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.6];
+    
+    gs.tickLabelFont = [self.gauge.style.tickLabelFont fontWithSize:20];
+    gs.tickLabelOffsetFromBaseline = -33;
+    gs.tickLabelColor = [UIColor darkTextColor];
+    
+    gs.tickBaselineWidth = 2;
+    gs.tickBaselineColor = [UIColor colorWithWhite:0.1 alpha:1];
+    gs.majorTickColor = gs.tickBaselineColor;
+    gs.minorTickColor = gs.tickBaselineColor;
+    
+    gs.innerBackgroundColor = [UIColor lightGrayColor];
+    gs.outerBackgroundColor = [UIColor grayColor];
+    
+    gs.bevelPrimaryColor = [UIColor lightGrayColor];
+    gs.bevelSecondaryColor = [UIColor whiteColor];
     
     [self.view addSubview:self.gauge];
 }
