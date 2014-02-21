@@ -27,23 +27,17 @@
     // Create a gauge
     self.gauge = [[SGaugeRadial alloc] initWithFrame:CGRectInset(self.view.bounds, 40, 100)
                                          fromMinimum:@0
-                                           toMaximum:@5];
+                                           toMaximum:@1];
     
     [self.view addSubview:self.gauge];
     
     // Let's try the audio meter
-    self.audioMeter = [SCAudioMeter new];
+    self.audioMeter = [[SCAudioMeter alloc] initWithSamplePeriod:0.1];
     [self.audioMeter beginAudioMeteringWithCallback:^(double value) {
         NSLog(@"RMS Value: %0.3f", value);
-        self.gauge.value = value;
+        [self.gauge setValue:value duration:0.1];
     }];
     
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
