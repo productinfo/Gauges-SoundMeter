@@ -10,7 +10,7 @@
 
 @interface SCAudioMeter : NSObject
 
-- (instancetype)initWithSamplePeriod:(NSTimeInterval)samplePeriodMs;
+- (instancetype)initWithSamplePeriod:(NSTimeInterval)samplePeriod;
 - (void)beginAudioMeteringWithCallback:(void (^)(double value))callback;
 - (void)endAudioMetering;
 

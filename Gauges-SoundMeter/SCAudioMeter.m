@@ -27,12 +27,12 @@
 
 @implementation SCAudioMeter
 
-- (instancetype)initWithSamplePeriod:(NSTimeInterval)samplePeriodMs
+- (instancetype)initWithSamplePeriod:(NSTimeInterval)samplePeriod
 {
     self = [super init];
     if (self) {
         self.microphone = [EZMicrophone microphoneWithDelegate:self];
-        self.period = samplePeriodMs;
+        self.period = samplePeriod;
         self.sampleProcessingQueue = dispatch_queue_create("com.shinobicontrols.gauges.soundmeter.processqueue", NULL);
     }
     return self;
