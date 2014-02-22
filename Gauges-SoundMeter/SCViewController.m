@@ -61,7 +61,7 @@
                                          maximum:@0
                                            color:[[UIColor redColor] colorWithAlphaComponent:0.4]]
         ];
-    gs.qualitativeRangeOuterPosition = self.gauge.style.tickBaselinePosition;
+    gs.qualitativeRangeOuterPosition = gs.tickBaselinePosition;
     gs.qualitativeRangeInnerPosition = 0.85;
     
     gs.majorTickSize = CGSizeMake(2, 17);
