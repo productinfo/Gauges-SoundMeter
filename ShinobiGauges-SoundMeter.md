@@ -444,3 +444,21 @@ INSERT IMAGE HERE
 
 ## Conclusion
 
+In this post you've learnt how to use a ShinobiGauge for a very popular
+app-type - an audio level meter. In actual fact, the most complicated part of
+the app is actually obtaining the values to display using the gauge. The gauges
+themselves are very configurable, and super-easy to style.
+
+In this tutorial we only looked at using a radial gauge, but you could replace
+it with a linear gauge instead - some of the styling code would change, but
+everything else that you've written could remain the same.
+
+The code for this is available on Github at [github.com/ShinobiControls/ShinobiGauges-SoundMeter](https://github.com/sammyd/ShinobiGauges-SoundMeter)
+so you can download or clone it and try it out. Don't forget that you will need
+to use CocoaPods to obtain the __EZAudio__ dependency, and to run `pod install`
+to configure the projects correctly.
+
+If you have any questions or comments feel free to leave a message below, or
+grab me on twitter - [@iwantmyrealname](https://twitter.com/iwantmyrealname).
+
+sam
