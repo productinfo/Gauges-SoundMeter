@@ -353,6 +353,94 @@ GIF_HERE gauge_with_log_scale
 
 ## Configure the Gauge
 
+The appearance of a ShinobiGauge is extremely configurable, primarily via the
+style property - an `SGaugeStyle` object. First of all, we'll look at changing
+the basic appearance, before adding a qualitative range to the gauge.
+
+### Basic Appearance
+
+There are a lot of properties on the `SGaugeStyle` object which control the
+appearance of the gauge - as detailed in the [documentation](http://www.shinobicontrols.com/docs/ShinobiControls/ShinobiGauges/2.5.0/Standard/Normal/Classes/SGaugeStyle.html).
+We'll take a look at some of them in the `createGauge` method:
+
+    SGaugeStyle *gs = self.gauge.style;
+    gs.knobRadius = 10;
+    gs.knobColor = [UIColor darkGrayColor];
+    gs.knobBorderWidth = 2;
+
+Here we're configuring the appearance of the knob at the center of the gauge -
+setting the size, color and border width. We can combine this with some config
+of the needle itself:
+
+    gs.needleWidth = 10;
+    gs.needleBorderWidth = 2;
+    gs.needleColor = [[UIColor orangeColor] colorWithAlphaComponent:0.8];
+    gs.needleBorderColor = [[UIColor darkGrayColor] colorWithAlphaComponent:0.6];
+
+The tick labels have similar properties to `UILabel` objects, which are
+accessible on the style object:
+
+    gs.tickLabelFont = [self.gauge.style.tickLabelFont fontWithSize:20];
+    gs.tickLabelOffsetFromBaseline = -33;
+    gs.tickLabelColor = [UIColor darkTextColor];
+
+The __baseline__ is the circular axis towards the outside of the gauge. The
+tick marks extend from the baseline, and both have some properties on the style
+object:
+
+    gs.tickBaselineWidth = 2;
+    gs.tickBaselineColor = [UIColor colorWithWhite:0.1 alpha:1];
+    gs.majorTickColor = gs.tickBaselineColor;
+    gs.minorTickColor = gs.tickBaselineColor;
+
+Finally, we can set the colors on the background and bevel of the gauge:
+
+    gs.innerBackgroundColor = [UIColor lightGrayColor];
+    gs.outerBackgroundColor = [UIColor grayColor];
+    gs.bevelPrimaryColor = [UIColor lightGrayColor];
+    gs.bevelSecondaryColor = [UIColor whiteColor];
+
+If you run the app up now, you'll see the effect of the style changes you've
+just made.
+
+INSERT IMAGE HERE
+
+
+### Qualitative Range
+
+A qualitative range is represented by coloring a range on the gauge - for
+example you might want really loud sounds to hit the red zone etc. These ranges
+are specified on the gauge itself, as an array of `SGaugeQualitativeRange`
+objects, each of which requires a color, and a start and end value:
+
+    // Set up some qualatitive ranges
+    self.gauge.qualitativeRanges = @[
+    [SGaugeQualitativeRange rangeWithMinimum:@-60
+                                     maximum:@-15
+                                       color:[[UIColor greenColor] colorWithAlphaComponent:0.4]],
+    [SGaugeQualitativeRange rangeWithMinimum:@-15
+                                     maximum:@-8
+                                       color:[[UIColor yellowColor] colorWithAlphaComponent:0.4]],
+    [SGaugeQualitativeRange rangeWithMinimum:@-8
+                                     maximum:@-2
+                                       color:[[UIColor orangeColor] colorWithAlphaComponent:0.4]],
+    [SGaugeQualitativeRange rangeWithMinimum:@-2
+                                     maximum:@0
+                                       color:[[UIColor redColor] colorWithAlphaComponent:0.4]]
+    ];
+
+In order to change the width of the range coloring, there are a couple of
+properties on the style object:
+
+    gs.qualitativeRangeOuterPosition = gs.tickBaselinePosition;
+    gs.qualitativeRangeInnerPosition = 0.85;
+
+Now, when you run the app up, you'll see the ranges colored as per the ranges
+you specified above.
+
+
+INSERT IMAGE HERE
+
 
 ## Conclusion
 
