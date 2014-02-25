@@ -97,7 +97,7 @@ which specifies how often the RMS value should be passed to the callback. To do
 this we use an `NSTimer`, along with some accumulator properties:
 
     #import <EZAudio/EZMicrophone.h>
-    
+
     @interface SCAudioMeter () <EZMicrophoneDelegate>
 
     @property (nonatomic, copy) void (^measurementCallback)(double value);
@@ -405,7 +405,7 @@ Finally, we can set the colors on the background and bevel of the gauge:
 If you run the app up now, you'll see the effect of the style changes you've
 just made.
 
-INSERT IMAGE HERE
+![Restyled Gauge](img/gauge_restyled.png)
 
 
 ### Qualitative Range
@@ -441,7 +441,7 @@ Now, when you run the app up, you'll see the ranges colored as per the ranges
 you specified above.
 
 
-INSERT IMAGE HERE
+![Gauge with qualitative range](img/gauge_restyled_qualitative.png)
 
 
 ## Conclusion
