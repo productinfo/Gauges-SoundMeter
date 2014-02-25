@@ -46,8 +46,8 @@ modeled on [RubyGems](http://rubygems.org) in the ruby world. If you haven't
 used it before then head over to the excellent guides at
 [guides.cocoapods.org](http://guides.cocoapods.org/), to find out how.
 
-Start out with a simple __Single View Application__ and create a __PodFile__
-which contains the following:
+Start out with a simple __Single View Application__ and create an empty file
+called __PodFile__ which contains the following:
 
     pod 'EZAudio', '~> 0.0.3'
 
@@ -96,6 +96,8 @@ accuracy. The `initWithSamplePeriod:` method takes an `NSTimeInterval` value
 which specifies how often the RMS value should be passed to the callback. To do
 this we use an `NSTimer`, along with some accumulator properties:
 
+    #import <EZAudio/EZMicrophone.h>
+    
     @interface SCAudioMeter () <EZMicrophoneDelegate>
 
     @property (nonatomic, copy) void (^measurementCallback)(double value);
