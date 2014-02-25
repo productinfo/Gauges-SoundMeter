@@ -319,7 +319,7 @@ Creation of the gauge is handed off to a helper method, `createGauge`:
 If you run the app up now, and make some noise, then you'll see the needle
 moving in response to the volume - pretty cool!
 
-GIF_HERE gauge_with_linear_scale
+![Linear Gauge](img/gauge_linear.png)
 
 
 ## Rescaling the values
@@ -351,7 +351,7 @@ Now, if you run up the app, you'll again see a gauge which has a needle which
 moves with the volume of detected sound, but this time it will be a lot more
 sensitive to the quieter sounds, due to the logarithmic scaling.
 
-GIF_HERE gauge_with_log_scale
+![Log-Scaled Gauge](img/gauge_log.png)
 
 ## Configure the Gauge
 
