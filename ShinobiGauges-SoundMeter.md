@@ -319,7 +319,7 @@ Creation of the gauge is handed off to a helper method, `createGauge`:
 If you run the app up now, and make some noise, then you'll see the needle
 moving in response to the volume - pretty cool!
 
-![Linear Gauge](img/gauge_linear.png)
+![Linear Gauge](img/gauge_linear.gif)
 
 
 ## Rescaling the values
@@ -351,7 +351,7 @@ Now, if you run up the app, you'll again see a gauge which has a needle which
 moves with the volume of detected sound, but this time it will be a lot more
 sensitive to the quieter sounds, due to the logarithmic scaling.
 
-![Log-Scaled Gauge](img/gauge_log.png)
+![Log-Scaled Gauge](img/gauge_log.gif)
 
 ## Configure the Gauge
 
@@ -405,7 +405,7 @@ Finally, we can set the colors on the background and bevel of the gauge:
 If you run the app up now, you'll see the effect of the style changes you've
 just made.
 
-![Restyled Gauge](img/gauge_restyled.png)
+![Restyled Gauge](img/gauge_styled.png)
 
 
 ### Qualitative Range
@@ -441,7 +441,7 @@ Now, when you run the app up, you'll see the ranges colored as per the ranges
 you specified above.
 
 
-![Gauge with qualitative range](img/gauge_restyled_qualitative.png)
+![Gauge with qualitative range](img/gauge_styled_qualitative.png)
 
 
 ## Conclusion
