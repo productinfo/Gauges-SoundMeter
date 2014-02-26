@@ -47,7 +47,7 @@ used it before then head over to the excellent guides at
 [guides.cocoapods.org](http://guides.cocoapods.org/), to find out how.
 
 Start out with a simple __Single View Application__ and create an empty file
-called __PodFile__ which contains the following:
+called __Podfile__ which contains the following:
 
     pod 'EZAudio', '~> 0.0.3'
 
