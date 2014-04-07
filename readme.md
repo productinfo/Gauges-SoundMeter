@@ -26,7 +26,7 @@ If you’re using the trial version you’ll need to add your license key. To do
         …
     }
 
-You will also need to use [CocoaPods](http://cocoapods.org/). There is further info in the [project writeup](ShinobiGauges-SoundMeter.md).
+The project uses [CocoaPods](http://cocoapods.org/), so you'll need to have CocoaPods set up, and to run `pod install` before you will be able to get the project to compile. There is further info in the [project writeup](ShinobiGauges-SoundMeter.md).
 
 Contributing
 ------------
