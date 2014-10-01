@@ -1,593 +1,1277 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		226A402692B54FF59A3CA8F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A70798DA2E846E583F3D551 /* libPods.a */; };
-		22D0235918B77FAC000C2268 /* ShinobiGauges.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D0235818B77FAC000C2268 /* ShinobiGauges.framework */; };
-		F4199B6C18B3C63200D4202C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4199B6B18B3C63200D4202C /* Foundation.framework */; };
-		F4199B6E18B3C63200D4202C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4199B6D18B3C63200D4202C /* CoreGraphics.framework */; };
-		F4199B7018B3C63200D4202C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4199B6F18B3C63200D4202C /* UIKit.framework */; };
-		F4199B7618B3C63200D4202C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4199B7418B3C63200D4202C /* InfoPlist.strings */; };
-		F4199B7818B3C63200D4202C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4199B7718B3C63200D4202C /* main.m */; };
-		F4199B7C18B3C63200D4202C /* SCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4199B7B18B3C63200D4202C /* SCAppDelegate.m */; };
-		F4199B7F18B3C63200D4202C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4199B7D18B3C63200D4202C /* Main.storyboard */; };
-		F4199B8218B3C63200D4202C /* SCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4199B8118B3C63200D4202C /* SCViewController.m */; };
-		F4199B8418B3C63200D4202C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4199B8318B3C63200D4202C /* Images.xcassets */; };
-		F4199B8B18B3C63200D4202C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4199B8A18B3C63200D4202C /* XCTest.framework */; };
-		F4199B8C18B3C63200D4202C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4199B6B18B3C63200D4202C /* Foundation.framework */; };
-		F4199B8D18B3C63200D4202C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4199B6F18B3C63200D4202C /* UIKit.framework */; };
-		F4199B9518B3C63200D4202C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4199B9318B3C63200D4202C /* InfoPlist.strings */; };
-		F4199B9718B3C63200D4202C /* Gauges_SoundMeterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4199B9618B3C63200D4202C /* Gauges_SoundMeterTests.m */; };
-		F4BF197118B500FB00C7F1AF /* SCAudioMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = F4BF197018B500FB00C7F1AF /* SCAudioMeter.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F4199B8E18B3C63200D4202C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4199B6018B3C63200D4202C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F4199B6718B3C63200D4202C;
-			remoteInfo = "Gauges-SoundMeter";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		1A70798DA2E846E583F3D551 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		22D0235818B77FAC000C2268 /* ShinobiGauges.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiGauges.framework; sourceTree = "<group>"; };
-		BCC1F680C6AF446680BCAC60 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		F4199B6818B3C63200D4202C /* Gauges-SoundMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gauges-SoundMeter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4199B6B18B3C63200D4202C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		F4199B6D18B3C63200D4202C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F4199B6F18B3C63200D4202C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		F4199B7318B3C63200D4202C /* Gauges-SoundMeter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gauges-SoundMeter-Info.plist"; sourceTree = "<group>"; };
-		F4199B7518B3C63200D4202C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F4199B7718B3C63200D4202C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F4199B7918B3C63200D4202C /* Gauges-SoundMeter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Gauges-SoundMeter-Prefix.pch"; sourceTree = "<group>"; };
-		F4199B7A18B3C63200D4202C /* SCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAppDelegate.h; sourceTree = "<group>"; };
-		F4199B7B18B3C63200D4202C /* SCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCAppDelegate.m; sourceTree = "<group>"; };
-		F4199B7E18B3C63200D4202C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F4199B8018B3C63200D4202C /* SCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCViewController.h; sourceTree = "<group>"; };
-		F4199B8118B3C63200D4202C /* SCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCViewController.m; sourceTree = "<group>"; };
-		F4199B8318B3C63200D4202C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F4199B8918B3C63200D4202C /* Gauges-SoundMeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gauges-SoundMeterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4199B8A18B3C63200D4202C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F4199B9218B3C63200D4202C /* Gauges-SoundMeterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Gauges-SoundMeterTests-Info.plist"; sourceTree = "<group>"; };
-		F4199B9418B3C63200D4202C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F4199B9618B3C63200D4202C /* Gauges_SoundMeterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gauges_SoundMeterTests.m; sourceTree = "<group>"; };
-		F4BF196F18B500FB00C7F1AF /* SCAudioMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAudioMeter.h; sourceTree = "<group>"; };
-		F4BF197018B500FB00C7F1AF /* SCAudioMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAudioMeter.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		F4199B6518B3C63200D4202C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4199B6E18B3C63200D4202C /* CoreGraphics.framework in Frameworks */,
-				F4199B7018B3C63200D4202C /* UIKit.framework in Frameworks */,
-				F4199B6C18B3C63200D4202C /* Foundation.framework in Frameworks */,
-				226A402692B54FF59A3CA8F4 /* libPods.a in Frameworks */,
-				22D0235918B77FAC000C2268 /* ShinobiGauges.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4199B8618B3C63200D4202C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4199B8B18B3C63200D4202C /* XCTest.framework in Frameworks */,
-				F4199B8D18B3C63200D4202C /* UIKit.framework in Frameworks */,
-				F4199B8C18B3C63200D4202C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		F4199B5F18B3C63200D4202C = {
-			isa = PBXGroup;
-			children = (
-				F4199B7118B3C63200D4202C /* Gauges-SoundMeter */,
-				F4199B9018B3C63200D4202C /* Gauges-SoundMeterTests */,
-				F4199B6A18B3C63200D4202C /* Frameworks */,
-				F4199B6918B3C63200D4202C /* Products */,
-				BCC1F680C6AF446680BCAC60 /* Pods.xcconfig */,
-			);
-			indentWidth = 4;
-			sourceTree = "<group>";
-			tabWidth = 4;
-			usesTabs = 0;
-		};
-		F4199B6918B3C63200D4202C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F4199B6818B3C63200D4202C /* Gauges-SoundMeter.app */,
-				F4199B8918B3C63200D4202C /* Gauges-SoundMeterTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F4199B6A18B3C63200D4202C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				22D0235818B77FAC000C2268 /* ShinobiGauges.framework */,
-				F4199B6B18B3C63200D4202C /* Foundation.framework */,
-				F4199B6D18B3C63200D4202C /* CoreGraphics.framework */,
-				F4199B6F18B3C63200D4202C /* UIKit.framework */,
-				F4199B8A18B3C63200D4202C /* XCTest.framework */,
-				1A70798DA2E846E583F3D551 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F4199B7118B3C63200D4202C /* Gauges-SoundMeter */ = {
-			isa = PBXGroup;
-			children = (
-				F4BF196E18B500E400C7F1AF /* Audio Meter */,
-				F4199B7A18B3C63200D4202C /* SCAppDelegate.h */,
-				F4199B7B18B3C63200D4202C /* SCAppDelegate.m */,
-				F4199B7D18B3C63200D4202C /* Main.storyboard */,
-				F4199B8018B3C63200D4202C /* SCViewController.h */,
-				F4199B8118B3C63200D4202C /* SCViewController.m */,
-				F4199B8318B3C63200D4202C /* Images.xcassets */,
-				F4199B7218B3C63200D4202C /* Supporting Files */,
-			);
-			path = "Gauges-SoundMeter";
-			sourceTree = "<group>";
-		};
-		F4199B7218B3C63200D4202C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F4199B7318B3C63200D4202C /* Gauges-SoundMeter-Info.plist */,
-				F4199B7418B3C63200D4202C /* InfoPlist.strings */,
-				F4199B7718B3C63200D4202C /* main.m */,
-				F4199B7918B3C63200D4202C /* Gauges-SoundMeter-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F4199B9018B3C63200D4202C /* Gauges-SoundMeterTests */ = {
-			isa = PBXGroup;
-			children = (
-				F4199B9618B3C63200D4202C /* Gauges_SoundMeterTests.m */,
-				F4199B9118B3C63200D4202C /* Supporting Files */,
-			);
-			path = "Gauges-SoundMeterTests";
-			sourceTree = "<group>";
-		};
-		F4199B9118B3C63200D4202C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F4199B9218B3C63200D4202C /* Gauges-SoundMeterTests-Info.plist */,
-				F4199B9318B3C63200D4202C /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F4BF196E18B500E400C7F1AF /* Audio Meter */ = {
-			isa = PBXGroup;
-			children = (
-				F4BF196F18B500FB00C7F1AF /* SCAudioMeter.h */,
-				F4BF197018B500FB00C7F1AF /* SCAudioMeter.m */,
-			);
-			name = "Audio Meter";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		F4199B6718B3C63200D4202C /* Gauges-SoundMeter */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F4199B9A18B3C63200D4202C /* Build configuration list for PBXNativeTarget "Gauges-SoundMeter" */;
-			buildPhases = (
-				0140125607CD421BB3DC87BE /* Check Pods Manifest.lock */,
-				F4199B6418B3C63200D4202C /* Sources */,
-				F4199B6518B3C63200D4202C /* Frameworks */,
-				F4199B6618B3C63200D4202C /* Resources */,
-				6C79F49058054E659AB8176A /* Warn for TODO and FIXME comments */,
-				0B9ABC4E12C24B12A023F556 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Gauges-SoundMeter";
-			productName = "Gauges-SoundMeter";
-			productReference = F4199B6818B3C63200D4202C /* Gauges-SoundMeter.app */;
-			productType = "com.apple.product-type.application";
-		};
-		F4199B8818B3C63200D4202C /* Gauges-SoundMeterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F4199B9D18B3C63200D4202C /* Build configuration list for PBXNativeTarget "Gauges-SoundMeterTests" */;
-			buildPhases = (
-				F4199B8518B3C63200D4202C /* Sources */,
-				F4199B8618B3C63200D4202C /* Frameworks */,
-				F4199B8718B3C63200D4202C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F4199B8F18B3C63200D4202C /* PBXTargetDependency */,
-			);
-			name = "Gauges-SoundMeterTests";
-			productName = "Gauges-SoundMeterTests";
-			productReference = F4199B8918B3C63200D4202C /* Gauges-SoundMeterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		F4199B6018B3C63200D4202C /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = SC;
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Shinobi Controls";
-				TargetAttributes = {
-					F4199B8818B3C63200D4202C = {
-						TestTargetID = F4199B6718B3C63200D4202C;
-					};
-				};
-			};
-			buildConfigurationList = F4199B6318B3C63200D4202C /* Build configuration list for PBXProject "Gauges-SoundMeter" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = F4199B5F18B3C63200D4202C;
-			productRefGroup = F4199B6918B3C63200D4202C /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				F4199B6718B3C63200D4202C /* Gauges-SoundMeter */,
-				F4199B8818B3C63200D4202C /* Gauges-SoundMeterTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		F4199B6618B3C63200D4202C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4199B8418B3C63200D4202C /* Images.xcassets in Resources */,
-				F4199B7618B3C63200D4202C /* InfoPlist.strings in Resources */,
-				F4199B7F18B3C63200D4202C /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4199B8718B3C63200D4202C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4199B9518B3C63200D4202C /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0140125607CD421BB3DC87BE /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		0B9ABC4E12C24B12A023F556 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6C79F49058054E659AB8176A /* Warn for TODO and FIXME comments */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Warn for TODO and FIXME comments";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "KEYWORDS=\"TODO:|FIXME:|\\?\\?\\?:|\\!\\!\\!:\"\nFILE_EXTENSIONS=\"h|m|mm|c|cpp\"\nfind -E \"${SRCROOT}\" -ipath \"${SRCROOT}/pods\" -prune -o \\( -regex \".*\\.($FILE_EXTENSIONS)$\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/ warning: \\$1/\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		F4199B6418B3C63200D4202C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4199B7C18B3C63200D4202C /* SCAppDelegate.m in Sources */,
-				F4199B8218B3C63200D4202C /* SCViewController.m in Sources */,
-				F4BF197118B500FB00C7F1AF /* SCAudioMeter.m in Sources */,
-				F4199B7818B3C63200D4202C /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4199B8518B3C63200D4202C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4199B9718B3C63200D4202C /* Gauges_SoundMeterTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F4199B8F18B3C63200D4202C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F4199B6718B3C63200D4202C /* Gauges-SoundMeter */;
-			targetProxy = F4199B8E18B3C63200D4202C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		F4199B7418B3C63200D4202C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4199B7518B3C63200D4202C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F4199B7D18B3C63200D4202C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4199B7E18B3C63200D4202C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F4199B9318B3C63200D4202C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4199B9418B3C63200D4202C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		F4199B9818B3C63200D4202C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_MISSING_PARENTHESES = YES;
-				GCC_WARN_SHADOW = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_VALUE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		F4199B9918B3C63200D4202C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_CHECK_SWITCH_STATEMENTS = YES;
-				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
-				GCC_WARN_MISSING_PARENTHESES = YES;
-				GCC_WARN_SHADOW = YES;
-				GCC_WARN_SIGN_COMPARE = YES;
-				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_LABEL = YES;
-				GCC_WARN_UNUSED_VALUE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				RUN_CLANG_STATIC_ANALYZER = YES;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		F4199B9B18B3C63200D4202C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCC1F680C6AF446680BCAC60 /* Pods.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/sdavies/dev/Evangelism/Blogs/Gauges-SoundMeter",
-					"/Users/sam/dev/iOS/ShinobiGauges-SoundMeter",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Gauges-SoundMeter/Gauges-SoundMeter-Prefix.pch";
-				INFOPLIST_FILE = "Gauges-SoundMeter/Gauges-SoundMeter-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		F4199B9C18B3C63200D4202C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BCC1F680C6AF446680BCAC60 /* Pods.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/sdavies/dev/Evangelism/Blogs/Gauges-SoundMeter",
-					"/Users/sam/dev/iOS/ShinobiGauges-SoundMeter",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Gauges-SoundMeter/Gauges-SoundMeter-Prefix.pch";
-				INFOPLIST_FILE = "Gauges-SoundMeter/Gauges-SoundMeter-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		F4199B9E18B3C63200D4202C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gauges-SoundMeter.app/Gauges-SoundMeter";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Gauges-SoundMeter/Gauges-SoundMeter-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Gauges-SoundMeterTests/Gauges-SoundMeterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		F4199B9F18B3C63200D4202C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Gauges-SoundMeter.app/Gauges-SoundMeter";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Gauges-SoundMeter/Gauges-SoundMeter-Prefix.pch";
-				INFOPLIST_FILE = "Gauges-SoundMeterTests/Gauges-SoundMeterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		F4199B6318B3C63200D4202C /* Build configuration list for PBXProject "Gauges-SoundMeter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F4199B9818B3C63200D4202C /* Debug */,
-				F4199B9918B3C63200D4202C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F4199B9A18B3C63200D4202C /* Build configuration list for PBXNativeTarget "Gauges-SoundMeter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F4199B9B18B3C63200D4202C /* Debug */,
-				F4199B9C18B3C63200D4202C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F4199B9D18B3C63200D4202C /* Build configuration list for PBXNativeTarget "Gauges-SoundMeterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F4199B9E18B3C63200D4202C /* Debug */,
-				F4199B9F18B3C63200D4202C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = F4199B6018B3C63200D4202C /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0140125607CD421BB3DC87BE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>0B9ABC4E12C24B12A023F556</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>0F46ADDEE62B69BE3FB45B59</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1A70798DA2E846E583F3D551</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>226A402692B54FF59A3CA8F4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1A70798DA2E846E583F3D551</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>63AFF4714D41F32B751DFDC3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods/Pods.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>68D63B5918F2A8330021EEA0</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>ShinobiGauges.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/ShinobiGauges.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>68D63B5A18F2A8330021EEA0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>68D63B5918F2A8330021EEA0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6C79F49058054E659AB8176A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Warn for TODO and FIXME comments</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>KEYWORDS="TODO:|FIXME:|\?\?\?:|\!\!\!:"
+FILE_EXTENSIONS="h|m|mm|c|cpp"
+find -E "${SRCROOT}" -ipath "${SRCROOT}/pods" -prune -o \( -regex ".*\.($FILE_EXTENSIONS)$" \) -print0 | xargs -0 egrep --with-filename --line-number --only-matching "($KEYWORDS).*\$" | perl -p -e "s/($KEYWORDS)/ warning: \$1/"
+</string>
+		</dict>
+		<key>8DBB96D28202EE9589BAE651</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>63AFF4714D41F32B751DFDC3</string>
+				<string>0F46ADDEE62B69BE3FB45B59</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B5F18B3C63200D4202C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F4199B7118B3C63200D4202C</string>
+				<string>F4199B9018B3C63200D4202C</string>
+				<string>F4199B6A18B3C63200D4202C</string>
+				<string>F4199B6918B3C63200D4202C</string>
+				<string>8DBB96D28202EE9589BAE651</string>
+			</array>
+			<key>indentWidth</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+			<key>tabWidth</key>
+			<string>4</string>
+			<key>usesTabs</key>
+			<string>0</string>
+		</dict>
+		<key>F4199B6018B3C63200D4202C</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>SC</string>
+				<key>LastUpgradeCheck</key>
+				<string>0600</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Shinobi Controls</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>F4199B8818B3C63200D4202C</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>F4199B6718B3C63200D4202C</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>F4199B6318B3C63200D4202C</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>F4199B5F18B3C63200D4202C</string>
+			<key>productRefGroup</key>
+			<string>F4199B6918B3C63200D4202C</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>F4199B6718B3C63200D4202C</string>
+				<string>F4199B8818B3C63200D4202C</string>
+			</array>
+		</dict>
+		<key>F4199B6318B3C63200D4202C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>F4199B9818B3C63200D4202C</string>
+				<string>F4199B9918B3C63200D4202C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F4199B6418B3C63200D4202C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F4199B7C18B3C63200D4202C</string>
+				<string>F4199B8218B3C63200D4202C</string>
+				<string>F4BF197118B500FB00C7F1AF</string>
+				<string>F4199B7818B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F4199B6518B3C63200D4202C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>68D63B5A18F2A8330021EEA0</string>
+				<string>F4199B6E18B3C63200D4202C</string>
+				<string>F4199B7018B3C63200D4202C</string>
+				<string>F4199B6C18B3C63200D4202C</string>
+				<string>226A402692B54FF59A3CA8F4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F4199B6618B3C63200D4202C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F4199B8418B3C63200D4202C</string>
+				<string>F4199B7618B3C63200D4202C</string>
+				<string>F4199B7F18B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F4199B6718B3C63200D4202C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F4199B9A18B3C63200D4202C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>0140125607CD421BB3DC87BE</string>
+				<string>F4199B6418B3C63200D4202C</string>
+				<string>F4199B6518B3C63200D4202C</string>
+				<string>F4199B6618B3C63200D4202C</string>
+				<string>6C79F49058054E659AB8176A</string>
+				<string>0B9ABC4E12C24B12A023F556</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Gauges-SoundMeter</string>
+			<key>productName</key>
+			<string>Gauges-SoundMeter</string>
+			<key>productReference</key>
+			<string>F4199B6818B3C63200D4202C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>F4199B6818B3C63200D4202C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Gauges-SoundMeter.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F4199B6918B3C63200D4202C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F4199B6818B3C63200D4202C</string>
+				<string>F4199B8918B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B6A18B3C63200D4202C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>68D63B5918F2A8330021EEA0</string>
+				<string>F4199B6B18B3C63200D4202C</string>
+				<string>F4199B6D18B3C63200D4202C</string>
+				<string>F4199B6F18B3C63200D4202C</string>
+				<string>F4199B8A18B3C63200D4202C</string>
+				<string>1A70798DA2E846E583F3D551</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B6B18B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F4199B6C18B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B6B18B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B6D18B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F4199B6E18B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B6D18B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B6F18B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>F4199B7018B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B6F18B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B7118B3C63200D4202C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F4BF196E18B500E400C7F1AF</string>
+				<string>F4199B7A18B3C63200D4202C</string>
+				<string>F4199B7B18B3C63200D4202C</string>
+				<string>F4199B7D18B3C63200D4202C</string>
+				<string>F4199B8018B3C63200D4202C</string>
+				<string>F4199B8118B3C63200D4202C</string>
+				<string>F4199B8318B3C63200D4202C</string>
+				<string>F4199B7218B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Gauges-SoundMeter</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7218B3C63200D4202C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F4199B7318B3C63200D4202C</string>
+				<string>F4199B7418B3C63200D4202C</string>
+				<string>F4199B7718B3C63200D4202C</string>
+				<string>F4199B7918B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7318B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Gauges-SoundMeter-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7418B3C63200D4202C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F4199B7518B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7518B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7618B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B7418B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B7718B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7818B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B7718B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B7918B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Gauges-SoundMeter-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7A18B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SCAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7B18B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SCAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7C18B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B7B18B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B7D18B3C63200D4202C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F4199B7E18B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7E18B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B7F18B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B7D18B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B8018B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SCViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B8118B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SCViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B8218B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B8118B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B8318B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B8418B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B8318B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B8518B3C63200D4202C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F4199B9718B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F4199B8618B3C63200D4202C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F4199B8B18B3C63200D4202C</string>
+				<string>F4199B8D18B3C63200D4202C</string>
+				<string>F4199B8C18B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F4199B8718B3C63200D4202C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F4199B9518B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>F4199B8818B3C63200D4202C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>F4199B9D18B3C63200D4202C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>F4199B8518B3C63200D4202C</string>
+				<string>F4199B8618B3C63200D4202C</string>
+				<string>F4199B8718B3C63200D4202C</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>F4199B8F18B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Gauges-SoundMeterTests</string>
+			<key>productName</key>
+			<string>Gauges-SoundMeterTests</string>
+			<key>productReference</key>
+			<string>F4199B8918B3C63200D4202C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>F4199B8918B3C63200D4202C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Gauges-SoundMeterTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F4199B8A18B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>F4199B8B18B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B8A18B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B8C18B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B6B18B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B8D18B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B6F18B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B8E18B3C63200D4202C</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>F4199B6018B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>F4199B6718B3C63200D4202C</string>
+			<key>remoteInfo</key>
+			<string>Gauges-SoundMeter</string>
+		</dict>
+		<key>F4199B8F18B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>F4199B6718B3C63200D4202C</string>
+			<key>targetProxy</key>
+			<string>F4199B8E18B3C63200D4202C</string>
+		</dict>
+		<key>F4199B9018B3C63200D4202C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F4199B9618B3C63200D4202C</string>
+				<string>F4199B9118B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Gauges-SoundMeterTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B9118B3C63200D4202C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F4199B9218B3C63200D4202C</string>
+				<string>F4199B9318B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B9218B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Gauges-SoundMeterTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B9318B3C63200D4202C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F4199B9418B3C63200D4202C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B9418B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B9518B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B9318B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B9618B3C63200D4202C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Gauges_SoundMeterTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4199B9718B3C63200D4202C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4199B9618B3C63200D4202C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4199B9818B3C63200D4202C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_MISSING_NEWLINE</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_CHECK_SWITCH_STATEMENTS</key>
+				<string>YES</string>
+				<key>GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED</key>
+				<string>YES</string>
+				<key>GCC_WARN_MISSING_PARENTHESES</key>
+				<string>YES</string>
+				<key>GCC_WARN_SHADOW</key>
+				<string>YES</string>
+				<key>GCC_WARN_SIGN_COMPARE</key>
+				<string>YES</string>
+				<key>GCC_WARN_TYPECHECK_CALLS_TO_PRINTF</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_LABEL</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VALUE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>RUN_CLANG_STATIC_ANALYZER</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>F4199B9918B3C63200D4202C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_MISSING_NEWLINE</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_CHECK_SWITCH_STATEMENTS</key>
+				<string>YES</string>
+				<key>GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED</key>
+				<string>YES</string>
+				<key>GCC_WARN_MISSING_PARENTHESES</key>
+				<string>YES</string>
+				<key>GCC_WARN_SHADOW</key>
+				<string>YES</string>
+				<key>GCC_WARN_SIGN_COMPARE</key>
+				<string>YES</string>
+				<key>GCC_WARN_TYPECHECK_CALLS_TO_PRINTF</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_LABEL</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VALUE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>RUN_CLANG_STATIC_ANALYZER</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>F4199B9A18B3C63200D4202C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>F4199B9B18B3C63200D4202C</string>
+				<string>F4199B9C18B3C63200D4202C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F4199B9B18B3C63200D4202C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>63AFF4714D41F32B751DFDC3</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Gauges-SoundMeter/Gauges-SoundMeter-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Gauges-SoundMeter/Gauges-SoundMeter-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>F4199B9C18B3C63200D4202C</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0F46ADDEE62B69BE3FB45B59</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Gauges-SoundMeter/Gauges-SoundMeter-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Gauges-SoundMeter/Gauges-SoundMeter-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>F4199B9D18B3C63200D4202C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>F4199B9E18B3C63200D4202C</string>
+				<string>F4199B9F18B3C63200D4202C</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>F4199B9E18B3C63200D4202C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Gauges-SoundMeter.app/Gauges-SoundMeter</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Gauges-SoundMeter/Gauges-SoundMeter-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>Gauges-SoundMeterTests/Gauges-SoundMeterTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>F4199B9F18B3C63200D4202C</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Gauges-SoundMeter.app/Gauges-SoundMeter</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Gauges-SoundMeter/Gauges-SoundMeter-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Gauges-SoundMeterTests/Gauges-SoundMeterTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>F4BF196E18B500E400C7F1AF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F4BF196F18B500FB00C7F1AF</string>
+				<string>F4BF197018B500FB00C7F1AF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Audio Meter</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4BF196F18B500FB00C7F1AF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SCAudioMeter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4BF197018B500FB00C7F1AF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SCAudioMeter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F4BF197118B500FB00C7F1AF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4BF197018B500FB00C7F1AF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>F4199B6018B3C63200D4202C</string>
+</dict>
+</plist>
