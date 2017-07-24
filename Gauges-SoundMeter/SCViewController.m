@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [ShinobiGauges setLicenseKey:@"<YOUR LICENSE KEY HERE>"];
+    [ShinobiGauges setTrialKey:@"<YOUR TRIAL KEY HERE>"];
     // Create a gauge
     [self createGauge];
     
